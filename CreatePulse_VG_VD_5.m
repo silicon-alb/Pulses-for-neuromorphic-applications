@@ -1,3 +1,12 @@
+%##### CREATOR ALBERT.D############
+
+%# Pulses-for-neuromorphic-applications
+%A matlab program with additional csv files to create piecewise linear curves to potentiate and read neurons.
+%The matlab program outputs a time vs. Gate voltage and time vs. Drain voltage in text files 'VG.txt' and 'VD.txt'
+%VG.txt and VD.txt can be used to potentiate a FeFET/ RRAM and other synaptic devices.
+%VG#5 and VD#5 are template pulses. The number of cycles -->'cycles' in the Matlab code determines the number of positive pulses. The number of total positive pulses in VG.txt is = cycles+1.
+%
+
 clc;
 clear all;
 close all;
@@ -16,7 +25,7 @@ td=N(:,1);
 VD=N(:,2);
 
 %%%%%% For n cycles no. of pulses created is n+1
-cycle=199;
+cycle=5;
 % c1=10;
 for j=1:1:cycle
     c=11;
